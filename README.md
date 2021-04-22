@@ -1,0 +1,1 @@
+# angular_member_service
