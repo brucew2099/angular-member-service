@@ -1,0 +1,7 @@
+#notFound404 {
+  margin: 100px;
+  background-image: url('../../assets/404.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}

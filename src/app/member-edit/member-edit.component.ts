@@ -17,6 +17,7 @@ export class MemberEditComponent implements OnInit {
       MemberName: ['',Validators.required],
       MemberBio: ['',Validators.required],
       MemberAge: ['', [Validators.required, Validators.pattern("[0-9]{1,3}")]],
+      MemberId: [''],
     });
   }
 
@@ -28,11 +29,10 @@ export class MemberEditComponent implements OnInit {
     })
   }
 
-  updateMember(MemberName:string, MemberBio:string, MemberAge:string) {
+  updateMember(MemberName:string, MemberBio:string, MemberAge:string, MemberId:string) {
     this.route.params.subscribe(params => {
-      this.ms.updateMember(MemberName, MemberBio, MemberAge, params.id);
+      this.ms.updateMember(MemberName, MemberBio, MemberAge, MemberId);
       this.router.navigate(['members']);
     })
   }
-
 }

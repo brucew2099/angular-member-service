@@ -19,10 +19,4 @@ export class MemberGetComponent implements OnInit {
       this.members = data;
     });
   }
-
-  // updateMember(MemberName:string, MemberBio:string, MemberAge:string) {
-  //   this.route.params.subscribe(params => {
-  //     this.ms.updateMember(MemberName, MemberBio, MemberAge, params.id);
-  //     this.router.navigate(['members']);
-  //   })
 }

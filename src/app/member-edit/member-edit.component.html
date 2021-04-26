@@ -2,6 +2,13 @@
     <div class="card-body">
       <form [formGroup]="angForm" novalidate>
         <div class="form-group">
+          <label class="col-md-4">Member ID</label>
+          <input type="text" class="form-control" readonly
+          formControlName="MemberId"
+            #MemberId
+            [(ngModel)] = "member.MemberId"/>
+        </div>
+        <div class="form-group">
           <label class="col-md-4">Member Name</label>
           <input type="text" class="form-control"
           formControlName="MemberName"
@@ -43,7 +50,7 @@
         <div class="form-group">
           <button type="submit" class="btn btn-primary"
           [disabled]="angForm.pristine || angForm.invalid"
-          (click) = "updateMember(MemberName.value, MemberBio.value, MemberAge.value)">Update Member</button>
+          (click) = "updateMember(MemberName.value, MemberBio.value, MemberAge.value, MemberId.value)">Update Member</button>
         </div>
       </form>
     </div>

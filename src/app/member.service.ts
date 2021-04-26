@@ -33,15 +33,22 @@ export class MemberService {
     return this.http.get(`${this._uri}/${id}`);
   }
 
-  updateMember(MemberName:string, MemberBio:string, MemberAge:string, id:number) {
+  updateMember(MemberName:string, MemberBio:string, MemberAge:string, MemberId:string) {
     const obj = {
+      MemberId,
       MemberName,
       MemberBio,
       MemberAge
     }
     console.log(obj);
-    this.http.put(`${this._uri}/${id}`, obj).subscribe(res => {
+    this.http.put(`${this._uri}/${MemberId}`, obj).subscribe(res => {
       console.log('Update is successful');
+    })
+  }
+
+  deleteMember(id:number) {
+    this.http.delete(`${this._uri}/${id}`).subscribe(res => {
+      console.log('Delete is successful');
     })
   }
 }

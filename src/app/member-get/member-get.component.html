@@ -1,6 +1,7 @@
 <table class="table table-hover">
     <thead>
     <tr>
+        <td hidden>Member ID</td>
         <td>Member Name</td>
         <td>Member Bio</td>
         <td>Member Age</td>
@@ -10,10 +11,12 @@
 
     <tbody>
         <tr *ngFor="let member of members; let i = index">
+            <td hidden>{{ member.MemberId }}</td>
             <td>{{ member.MemberName }}</td>
             <td>{{ member.MemberBio }}</td>
             <td>{{ member.MemberAge }}</td>
-            <td><a [routerLink]="['/member/edit/', i + 1]" class="btn btn-primary">Edit</a></td>
+            <td><a [routerLink]="['/member/edit/', member.MemberId]" class="btn btn-primary">Edit</a></td>
+            <td><a [routerLink]="['/member/delete/', member.MemberId]" class="btn btn-danger">Delete</a></td>
             </tr>
     </tbody>
   </table>

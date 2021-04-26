@@ -11,6 +11,7 @@ import { MemberService } from './member.service';
 import { ReactiveFormsModule} from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { MemberDeleteComponent } from './member-delete/member-delete.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     MemberAddComponent,
     MemberEditComponent,
     MemberGetComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    MemberDeleteComponent
   ],
   imports: [
     BrowserModule,

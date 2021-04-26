@@ -5,6 +5,7 @@ import {MemberAddComponent} from './member-add/member-add.component';
 import {MemberGetComponent} from './member-get/member-get.component';
 import {MemberEditComponent} from './member-edit/member-edit.component';
 import {NotfoundComponent} from './notfound/notfound.component';
+import { MemberDeleteComponent } from './member-delete/member-delete.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'members',
     component:MemberGetComponent
+  },
+  {
+    path: 'member/delete/:id',
+    component:MemberDeleteComponent
   },
   {
     path: '404',
