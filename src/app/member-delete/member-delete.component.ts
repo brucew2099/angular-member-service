@@ -21,10 +21,6 @@ export class MemberDeleteComponent implements OnInit {
     })
   }
 
-  closeDelete() {
-    this.router.navigate(['members']);
-  }
-
   cancelDelete() {
     this.router.navigate(['members']);
   }
