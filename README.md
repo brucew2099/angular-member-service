@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
+## Mock API generation
+
+1. Create a project called `members` at http://mockapi.io
+2. Create a schema with the following fields
+   1. MemberId.... Object ID
+   2. MemberBio... String
+   3. MemberAge... Number
+   4. MemberName.. String 
+3. Generate mock data by clicking on GENERATE ALL button
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
